@@ -21,11 +21,11 @@ app.use("/dashboard", express.static(dashboardBuild));
 
 app.use(express.static(frontendBuild));
 
-app.get("/dashboard/*", (req, res) => {
+app.get("/dashboard/{*splat}", (req, res) => {
   res.sendFile(path.join(dashboardBuild, "index.html"));
 });
 
-app.get("*", (req, res) => {
+app.get("/{*splat}", (req, res) => {
   res.sendFile(path.join(frontendBuild, "index.html"));
 });
 
