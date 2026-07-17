@@ -1,0 +1,13 @@
+{
+  "name": "zerodha-clone",
+  "version": "1.0.0",
+  "description": "Zerodha Clone - Deploy on Render",
+  "private": true,
+  "scripts": {
+    "install-all": "cd backend && npm install && cd ../frontend && npm install && cd ../dashboard && npm install",
+    "build-frontend": "cd frontend && npm run build",
+    "build-dashboard": "cd dashboard && npm run build",
+    "build": "npm run install-all && npm run build-frontend && npm run build-dashboard",
+    "start": "cd backend && node index.js"
+  }
+}
